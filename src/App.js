@@ -1,6 +1,6 @@
 import React from "react"
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom"
-import SearchPage from "./pages/SearchPage"
+import { SearchPage } from "./pages"
 
 function App() {
   return (
