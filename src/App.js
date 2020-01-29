@@ -8,9 +8,15 @@ function App() {
       <Route exact path="/">
         <Redirect to="/search" />
       </Route>
-      <Route path="/search">
-        <SearchPage />
-      </Route>
+
+      <Route
+        exact
+        render={props => <SearchPage {...props} />}
+        location={{
+          pathname: "/search",
+          search: "?query=:searchQuery"
+        }}
+      />
     </Router>
   )
 }
