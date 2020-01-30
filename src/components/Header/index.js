@@ -4,10 +4,12 @@ import { SearchContainer } from "../../containers"
 
 const Header = () => {
   return (
-    <header className="main-header">
+    <header className="header">
       <div className="container">
-        <Logo />
-        <SearchContainer />
+        <div className="header-inner">
+          <Logo />
+          <SearchContainer />
+        </div>
       </div>
     </header>
   )

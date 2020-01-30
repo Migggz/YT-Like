@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-
+import { IoIosSearch } from "react-icons/io"
 const Search = ({ handleSubmit, currentQuery }) => {
   const [searchQuery, setSearchQuery] = useState(currentQuery)
 
@@ -12,9 +12,18 @@ const Search = ({ handleSubmit, currentQuery }) => {
         e.preventDefault()
         handleSubmit(searchQuery)
       }}
+      className="search-form"
     >
-      <input type="text" name="searchQuery" onChange={handleChange} value={searchQuery} />
-      <button type="submit">SUBMIT</button>
+      <input
+        className="search-input"
+        type="text"
+        name="searchQuery"
+        onChange={handleChange}
+        value={searchQuery}
+      />
+      <button className="search-submit" type="submit">
+        <IoIosSearch style={{ verticalAlign: "middle" }} />
+      </button>
     </form>
   )
 }

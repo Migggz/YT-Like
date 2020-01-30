@@ -23,18 +23,15 @@ const SearchContainer = ({
 
   useEffect(() => {
     setCurrentQuery(query)
-    fetchResults(query)
+    fetchResults(decodeURIComponent(query))
   }, [query])
 
   return <Search handleSubmit={submitQuery} currentQuery={decodeURIComponent(currentQuery)} />
 }
 
-const mapStateToProps = ({ searchResults, router }) => {
+const mapStateToProps = ({ router }) => {
   return {
-    router: router,
-    searchResults: searchResults.data,
-    isLoading: searchResults.isLoading,
-    error: searchResults.error
+    router: router
   }
 }
 
