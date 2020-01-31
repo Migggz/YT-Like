@@ -1,7 +1,7 @@
 import React, { Fragment, PureComponent } from "react"
 import { connect } from "react-redux"
 import LoadingBar from "react-redux-loading-bar"
-import SearchResultsCount from "../../components/SearchResultsCount/index"
+import SearchResultsCount from "../../components/SearchResultsCount"
 import ResultsItem from "../../components/ResultsItem"
 import Filters from "../../components/Filters"
 import { searchAction } from "../../actions"
