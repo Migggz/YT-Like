@@ -1,26 +1,35 @@
 .results
   margin-top: 30px
-  .results-count
-    display: flex
-    align-items: center
-    justify-content: space-between
+  .results-header
     border-bottom: 1px solid #ededed
     padding-bottom: 15px
     margin-bottom: 30px
+    line-height: 1
   .results-count_number
     font-weight: 500
     font-size: 1.7rem
+    line-height: normal
+    padding-top: 5px
+    @media (max-width: 575.98px)
+      display: none
+    
 
 
 .results-item
   display: flex
   margin-bottom: 30px
   color: #333
+  .results-item_content
+    min-width: 0
   .results-item_figure
     min-width: 245px
     max-width: 245px
     height: 138px
     margin-right: 15px
+    @media (max-width: 575.98px)
+      min-width: 50%
+      max-width: 50%
+      height: 130px
     &.results-item_figure--playlist
       position: relative
       &:after
@@ -40,20 +49,32 @@
       object-fit: cover
       display: block
       pointer-events: none
-      &.results-item_figure--channel
+    &.results-item_figure--channel
+      img
         width: 135px
         height: 135px
         border-radius: 50%
         margin: auto
+        @media (max-width: 575.98px)
+          width: 125px
+          height: 125px
+      @media (max-width: 575.98px)
+        min-width: 125px
+        max-width: 125px
   .results-item_title
     font-size: 1.8rem
     font-weight: 400
     line-height: 1.333
     max-height: 18*1.333*2px
     overflow: hidden
+    @media (max-width: 575.98px)
+      font-size: 1.6rem
+      max-height: 16*1.333*2px
   .results-item_channel
     font-size: 1.2rem
     color: #606060
+    @media (max-width: 575.98px)
+      font-size: 1.1rem
   .results-item_desc
     font-size: 1.3rem
     line-height: 1.5
@@ -61,20 +82,9 @@
     color: #606060
     max-height: 13*1.5*3px
     overflow: hidden
+    word-break: break-all
     b
       color: #333333
-
-
-
-.results-filters
-  appearance: none
-  background-color: transparent
-  border: 0
-  display: flex
-  align-items: center
-  text-transform: uppercase
-  font-size: 2rem
-  cursor: pointer
-  span
-    margin-left: 10px
-    font-size: 1.6rem
+    @media (max-width: 575.98px)
+      font-size: 1.2rem
+      max-height: 12*1.5*3px

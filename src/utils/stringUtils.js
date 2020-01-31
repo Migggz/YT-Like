@@ -6,3 +6,14 @@ export const highlightSearchKeyword = (query, text) => {
   })
   return newText
 }
+
+export const serializeParams = params => {
+  let serializedParams = ""
+  for (var key in params) {
+    if (serializedParams !== "") {
+      serializedParams += "&"
+    }
+    serializedParams += key + "=" + params[key]
+  }
+  return "?" + serializedParams
+}

@@ -1,0 +1,77 @@
+.results-filters
+  appearance: none
+  background-color: transparent
+  border: 0
+  display: flex
+  align-items: center
+  text-transform: uppercase
+  font-size: 2rem
+  cursor: pointer
+  float: right
+  outline: 0
+  position: relative
+  overflow: hidden
+  padding: 5px 10px
+  transition: 0.3s ease background-color
+  @media (max-width: 575.98px)
+    float: none
+  &:active
+    background-color: #ddd
+  &:after 
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 5px
+    height: 5px
+    background: rgba(255, 255, 255, .5)
+    opacity: 0
+    border-radius: 100%
+    transform: scale(1, 1) translate(-50%)
+    transform-origin: 50% 50%
+  
+  span
+    margin-left: 10px
+    font-size: 1.6rem
+
+
+.filters-collapse
+  max-height: 200px
+  width: 100%
+  flex: 1 1 100%
+  overflow: hidden
+  max-height: 0
+  transition: 0.5s ease-out max-height
+  @media (max-width: 575.98px)
+    display: none
+  &.opened
+    max-height: 200px
+
+.filters-group
+  padding-top: 30px
+  display: inline-block
+  .filters-group_title
+    font-weight: 500
+    font-size: 1.5rem
+    padding-bottom: 15px
+    text-transform: uppercase
+    border-bottom: 1px solid #DDD
+  .filters-list
+    margin-top: 15px
+  .filter-item
+    margin-bottom: 15px
+    &:last-of-type
+      margin-bottom: 0
+  .filter-label
+    color: #606060
+    font-size: 1.3rem
+    cursor: pointer
+    &.active
+      font-weight: 700
+      color: #333333
+    & + input
+      display: none
+
+
+.filters-select
+  max-width: 50%

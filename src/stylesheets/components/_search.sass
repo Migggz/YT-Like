@@ -1,26 +1,49 @@
 .search-form
   display: flex
   align-items: center
+  width: 100%
+  justify-content: space-between
+  max-width: 500px
 
 .search-input
   border: 1px solid #d9d9d9
   height: 30px
-  width: 300px
+  width: 100%
   font-size: 1.4rem
   color: #444
   padding: 0 10px
   outline: 1px solid #fff
-  transition: 0.2s ease outline
+  transition: 0.2s ease all
   &:focus
     outline: 1px solid #eee
+  @media (max-width: 575.98px)
+    width: calc(100% - 60px)
+    color: #fff
+    background-color: transparent
+    border-color: transparent
+    outline-color: transparent
+    pointer-events: none
+    &:focus
+      color: #333
+      background-color: #fff
+      outline: 1px solid #eee
+      border: 1px solid #d9d9d9
 
 .search-submit
   appearance: none
   display: block
-  width: 65px
+  min-width: 65px
+  max-width: 65px
   height: 30px
   background: #efefef
   cursor: pointer
   border: 0
   border: 1px solid #d9d9d9
   border-left: 0
+  @media (max-width: 575.98px)
+    min-width: 30px
+    max-width: 30px
+    background-color: transparent
+    border-color: transparent
+    color: #ffffff
+    font-size: 2.4rem

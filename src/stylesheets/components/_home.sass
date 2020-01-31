@@ -1,0 +1,38 @@
+.home
+  display: flex
+  align-content: center
+  justify-content: center
+  flex-direction: column
+  text-align: center
+  .home-title
+    font-size: 3rem
+  .search-input
+    margin-top: 20px
+    pointer-events: auto
+    @media (max-width: 575.98px)
+      background-color: #fff
+      border: 1px solid #dddddd
+  .home-desc
+    font-size: 1.8rem
+    color: #666
+    .home-link
+      background: transparent
+      color: #444
+      font-weight: 700
+  .home-form
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 30px
+  .home-submit
+    margin-top: 20px
+    background-color: #ddd
+  .home-link
+    display: inline-block
+    max-width: 1000px
+    margin: 20px auto
+    color: #ffffff
+    background-color: #444
+    white-space: nowrap
+    &:nth-of-type(2)
+      background-color: red

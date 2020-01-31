@@ -34,13 +34,12 @@ const ResultsItem = ({ query, data }) => {
         <div
           className={`results-item_figure ${
             isPlaylist(data.id.kind) ? "results-item_figure--playlist" : ""
-          }`}
+          } ${isChannel(data.id.kind) ? "results-item_figure--channel" : ""}`}
         >
           <img
             onError={addDefaultSrc}
             src={data.snippet.thumbnails.high.url}
             alt={data.snippet.title}
-            className={isChannel(data.id.kind) ? "results-item_figure--channel" : ""}
           />
         </div>
         <div className="results-item_content">

@@ -23,8 +23,8 @@ const SearchContainer = ({
 
   useEffect(() => {
     setCurrentQuery(query)
-    fetchResults(decodeURIComponent(query))
-  }, [query])
+    fetchResults(decodeURIComponent(currentQuery))
+  }, [currentQuery])
 
   return <Search handleSubmit={submitQuery} currentQuery={decodeURIComponent(currentQuery)} />
 }

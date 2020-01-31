@@ -1,4 +1,5 @@
 export const WEBSITE_NAME = "YT-Like"
+export const WEBSITE_LINK = "https://yt-like.magedmohamed.me"
 export const API_KEY = "API_TOKEN"
 export const API_TOKEN = process.env.REACT_APP_TOKEN
 export const YOUTUBE_API = "https://www.googleapis.com/youtube/v3"

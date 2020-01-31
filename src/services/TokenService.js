@@ -1,5 +1,5 @@
 import StorageService from "./StorageService"
-import { API_KEY } from "../constants"
+import { API_KEY, WEBSITE_LINK, API_TOKEN } from "../constants"
 
 class AuthService {
   static get storage() {
@@ -10,7 +10,14 @@ class AuthService {
   }
 
   static getToken() {
-    return this.storage.getItem(API_KEY) || ""
+    this.checkItem()
+    return this.storage.getItem(API_KEY)
+  }
+
+  static checkItem() {
+    if (window !== "undefined" && window.location.origin === WEBSITE_LINK) {
+      this.setToken(API_TOKEN)
+    }
   }
 
   static setToken(token = "") {
