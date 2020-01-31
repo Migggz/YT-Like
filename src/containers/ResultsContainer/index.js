@@ -1,7 +1,6 @@
 import React, { Fragment, PureComponent } from "react"
 import { connect } from "react-redux"
 import LoadingBar from "react-redux-loading-bar"
-import SearchResultsCount from "../../components/SearchResultsCount"
 import ResultsItem from "../../components/ResultsItem"
 import Filters from "../../components/Filters"
 import { searchAction } from "../../actions"
@@ -56,7 +55,9 @@ class Results extends PureComponent {
         <LoadingBar className="loading-bar" />
 
         <section className="results-header">
-          <SearchResultsCount count={isLoading ? 0 : searchResults.pageInfo.totalResults} />
+          <span className="results-count_number">
+            About {searchResults.pageInfo.totalResults.toLocaleString()} results
+          </span>
           <Filters
             onFilter={this.handleFilters}
             activeFilter={router.location.query.sort || "relevance"}
