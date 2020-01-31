@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1becb918-27e5-4d7e-bef2-91cadd875a7a/deploy-status)](https://app.netlify.com/sites/youtube-like/deploys)
+
 ### How it Works?
 
 If you visit the repo's [website](https://yt-like.magedmohammed.me) you will notice that I am already uses an Environment Variable which holds API Token for Youtube V3 API.
