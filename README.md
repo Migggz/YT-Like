@@ -1,6 +1,6 @@
 ### How it Works?
 
-If you visit the repo's [website](https://yt-like.magedmohammed.me) you will notice that I am already uses an Environment Variable which holds API Token for Youtube V3 API.
+If you visit the repo's [website](https://yt-like.magedmohamed.me) you will notice that I am already uses an Environment Variable which holds API Token for Youtube V3 API.
 
 If you want to run the project locally
 
